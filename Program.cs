@@ -10,6 +10,21 @@ string[] CopyMyArray(string[] firstArray)
     }
     return secondArray;
 }
+
+//2.  Определение количества элементов массива по требуемому условию
+int CalkWoldArray(string[] inArray,int k)
+{
+    int countW0ld = 0;
+    string wold = "";
+    for (int i = 0; i < inArray.Length; i++)
+    {
+        wold = inArray[i];
+        int countLetter = wold.Length;
+        if (countLetter <= k) countW0ld++;
+    }
+    return countW0ld;
+}
+
 Console.Clear();
 string[] myArray = { "Hello", "2", "World", ":-)" };
 int K = 3;
@@ -20,3 +35,6 @@ Console.Write(String.Join(", ", myArray1));
 Console.WriteLine();
 Console.WriteLine($"\nЭлементов в первичном наборе: {myArray1.Length}");
 Console.WriteLine();
+
+int calk = CalkWoldArray(myArray1, K);
+Console.WriteLine($"Элементов в итоговом наборе: {calk}");
