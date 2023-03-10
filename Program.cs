@@ -44,7 +44,7 @@ string[] CreateSecondArray(string[] firstArray, int size, int k)
     return secondArray;
 }
 
-//4. Добавление новыхэлементов в массив
+//4. Добавление новых элементов в массив
 string[] Append(string[] array, int count)
 {
     string[] result = new string[array.Length + count];
